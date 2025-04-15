@@ -1,19 +1,9 @@
-import './App.css'
+import Workspace from './components/layout/Workspace';
 
 function App() {
 
-  const testfn = (input: React.MouseEvent) => {
-    console.log('input', input);
-  }
-
   return (
-    <>
-      <div className="card">
-        <button onClick={testfn}>
-          click me!
-        </button>
-      </div>
-    </>
+    <Workspace />
   )
 }
 
