@@ -1,14 +1,11 @@
 import * as React from "react"
 import {
-  HelpCircleIcon,
   LayoutDashboardIcon,
   ListIcon,
-  SearchIcon,
-  SettingsIcon,
 } from "lucide-react"
-import { NavMain } from "@/components/ui/nav-main"
-import { NavSecondary } from "@/components/ui/nav-secondary"
-import { NavUser } from "@/components/ui/nav-user"
+import { NavMain } from "@/components/layout/nav-main"
+import { NavSecondary } from "@/components/layout/nav-secondary"
+import { NavUser } from "@/components/layout/nav-user"
 import {
   Sidebar,
   SidebarContent,
@@ -21,6 +18,8 @@ import {
 import adcashLogo from "@/assets/adcash-logo.svg" // light version
 import adcashLogoDark from "@/assets/adcash-logo-dark.svg"
 import { NAV } from "@/lib/constants"
+import { useTheme } from "@/components/theme-provider"
+
 const data = {
   user: {
     name: "shadcn",
@@ -41,25 +40,12 @@ const data = {
       id: NAV.CAMPAIGNS,
     },
   ],
-  navSecondary: [
-    {
-      title: "Settings",
-      url: "#",
-      icon: SettingsIcon,
-    },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: HelpCircleIcon,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: SearchIcon,
-    },
-  ],
+  navSecondary: [],
 }
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { theme } = useTheme();
+  const logo = theme === 'dark' ? adcashLogo : adcashLogoDark;
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -70,7 +56,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
               <a href="#">
-                <img src={adcashLogoDark} alt="adcash logo" className="" />
+                <img src={logo} alt="adcash logo" className="" />
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>

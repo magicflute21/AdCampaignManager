@@ -1,9 +1,12 @@
+import { ThemeProvider } from "@/components/theme-provider"
 import Workspace from './components/layout/Workspace';
 
 function App() {
 
   return (
-    <Workspace />
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+      <Workspace />
+    </ThemeProvider>
   )
 }
 

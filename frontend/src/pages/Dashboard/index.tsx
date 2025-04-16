@@ -1,7 +1,5 @@
-import { SectionCards } from "@/components/ui/section-cards"
-import { ChartAreaInteractive } from "@/components/ui/chart-area-interactive"
-import { DataTable } from "@/components/ui/data-table"
-import data from "../../components/layout/data.json";
+import { SectionCards } from "@/components/layout/section-cards"
+import { ChartAreaInteractive } from "@/components/layout/chart-area-interactive"
 
 
 export default function Dashboard() {
@@ -11,7 +9,6 @@ export default function Dashboard() {
       <div className="px-4 lg:px-6">
         <ChartAreaInteractive />
       </div>
-      <DataTable data={data} />
     </>
   )
 }
