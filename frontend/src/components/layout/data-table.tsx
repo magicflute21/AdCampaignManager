@@ -2,7 +2,6 @@ import * as React from "react"
 import {
   ColumnDef,
   ColumnFiltersState,
-  Row,
   SortingState,
   VisibilityState,
   flexRender,
@@ -57,22 +56,39 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
+import { Campaign, CampaignSchema } from "@/types/campaign-type"
+import { useCampaignsStore } from "@/store/useCampaignsStore"
 
-export const PayoutSchema = z.object({
-  countryCode: z.string(),
-  countryName: z.string(),
-  amount: z.number()
-});
+function CampaignTitleCell({ item }: { item: Campaign }) {
+  const openModal = useCampaignsStore((s) => s.openModal)
+  return (
+    <Button variant="link" onClick={() => { openModal(item, 'view') }} className="w-fit px-0 text-left text-foreground cursor-pointer">{item.title}</Button>
+  )
+}
 
-export const schema = z.object({
-  id: z.number(),
-  title: z.string(),
-  landingPageUrl: z.string(),
-  isRunning: z.boolean(),
-  payouts: z.array(PayoutSchema)
-})
+function MenuEdit({ item }: { item: Campaign }) {
+  const openModal = useCampaignsStore((s) => s.openModal)
+  return (
+    <DropdownMenuItem onClick={() => openModal(item, 'edit')}>Edit</DropdownMenuItem>
+  )
+}
 
-const columns: ColumnDef<z.infer<typeof schema>>[] = [
+function MenuView({ item }: { item: Campaign }) {
+  const openModal = useCampaignsStore((s) => s.openModal)
+  return (
+    <DropdownMenuItem onClick={() => openModal(item, 'view')}>View</DropdownMenuItem>
+  )
+}
+
+function MenuDelete({ item }: { item: Campaign }) {
+  const openAlertModal = useCampaignsStore((s) => s.openAlertModal)
+
+  return (
+    <DropdownMenuItem onClick={() => openAlertModal(item)}>Delete</DropdownMenuItem>
+  )
+}
+
+const columns: ColumnDef<z.infer<typeof CampaignSchema>>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -103,12 +119,8 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     accessorKey: "title",
     header: "Title",
     cell: ({ row }) => {
-      // return <TableCellViewer item={row.original} />
-
       return (
-        <Button variant="link" className="w-fit px-0 text-left text-foreground cursor-pointer">
-          {row.original.title}
-        </Button>
+        <CampaignTitleCell item={row.original} />
       )
     },
     enableHiding: false,
@@ -128,9 +140,9 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     cell: ({ row }) => (
       <div className="flex items-center gap-1 px-1.5">
         {!row.original.isRunning ? (
-          <div className="rounded-full bg-gray-400 size-2"></div>
+          <div className="rounded-full bg-gray-300 size-2"></div>
         ) : (
-          <div className="rounded-full bg-green-400 size-2"></div>
+          <div className="rounded-full bg-blue-500 size-2"></div>
         )}
         {row.original.isRunning ? 'Running' : 'Not Started'}
       </div>
@@ -141,13 +153,13 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     header: "Payout",
     cell: ({ row }) => {
       const SHOW_LENGTH = 2;
-
       const payoutCountries = row.original.payouts.slice(0, SHOW_LENGTH);
 
       return (
         <div className="flex items-center gap-0.5">
           {payoutCountries.map((country) => (
             <Badge
+              key={country.id}
               variant="outline"
               className="flex gap-1 px-1.5 text-muted-foreground [&_svg]:size-3"
             >
@@ -168,7 +180,7 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
   },
   {
     id: "actions",
-    cell: () => (
+    cell: ({ row }) => (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
@@ -181,10 +193,10 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-32">
-          <DropdownMenuItem>Edit</DropdownMenuItem>
-          <DropdownMenuItem>View</DropdownMenuItem>
+          <MenuEdit item={row.original} />
+          <MenuView item={row.original} />
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Delete</DropdownMenuItem>
+          <MenuDelete item={row.original} />
         </DropdownMenuContent>
       </DropdownMenu>
     ),
@@ -193,7 +205,7 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
 export function DataTable({
   data: initialData,
 }: {
-  data: z.infer<typeof schema>[]
+  data: z.infer<typeof CampaignSchema>[]
 }) {
   const [data] = React.useState(() => initialData)
   const [rowSelection, setRowSelection] = React.useState({})
