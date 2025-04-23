@@ -68,7 +68,7 @@ export function CampaignDialog() {
             <div className='col-span-3 flex flex-col flex-wrap items-start gap-2'>
               {campaign.payouts.map((payout) => (
                 <Badge key={payout.id} variant="outline">
-                  <span className="text-sm text-blue-950 dark:text-gray-200">{getFlagEmoji(payout.countryCode)}</span>
+                  <span className="text-sm text-violet-950 dark:text-gray-200">{getFlagEmoji(payout.countryCode)}</span>
                   <span>{payout.countryName}</span>
                   <span className="font-medium ml-1">${payout.amount.toFixed(2)}</span>
                 </Badge>
@@ -94,7 +94,7 @@ export function CampaignDialog() {
             </Label>
             {campaign.isRunning ? (
               <Badge variant="outline">
-                <CheckCircle className="text-blue-600" />
+                <CheckCircle className="text-violet-600" />
                 Active
               </Badge>
             ) : (

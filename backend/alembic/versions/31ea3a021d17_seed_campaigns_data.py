@@ -1,0 +1,206 @@
+"""seed campaigns data
+
+Revision ID: 31ea3a021d17
+Revises: 955893262d09
+Create Date: 2025-04-21 21:55:00.382170
+
+"""
+from typing import Sequence, Union
+
+from alembic import op
+import sqlalchemy as sa
+from sqlalchemy.sql import table, column
+
+
+# revision identifiers, used by Alembic.
+revision: str = '31ea3a021d17'
+down_revision: Union[str, None] = '955893262d09'
+branch_labels: Union[str, Sequence[str], None] = None
+depends_on: Union[str, Sequence[str], None] = None
+
+campaign_table = table('campaigns',
+    column('id', sa.Integer),
+    column('title', sa.String),
+    column('landing_page_url', sa.String),
+    column('is_running', sa.Boolean),
+)
+
+campaign_payout_table = table(
+    "campaign_payouts",
+    column("id", sa.Integer),
+    column("campaign_id", sa.Integer),
+    column("country_code", sa.String),
+    column("country_name", sa.String),
+    column("amount", sa.Float),
+)
+
+
+campaign_data = [
+    {"id": 1001, "title": "Summer Sale Promotion", "landing_page_url": "https://example.com/summer-sale", "is_running": True},
+    {"id": 1002, "title": "Mobile App Download", "landing_page_url": "https://example.com/app-download", "is_running": True},
+    {"id": 1003, "title": "Email Subscription Drive", "landing_page_url": "https://example.com/subscribe", "is_running": False},
+    {"id": 1004, "title": "Gaming Tournament Registration", "landing_page_url": "https://example.com/tournament", "is_running": True},
+    {"id": 1005, "title": "Financial Service Lead Gen", "landing_page_url": "https://example.com/finance-service", "is_running": True},
+    {"id": 1006, "title": "Insurance Quote Campaign", "landing_page_url": "https://example.com/insurance-quote", "is_running": True},
+    {"id": 1007, "title": "Travel Package Deal", "landing_page_url": "https://example.com/travel-deal", "is_running": False},
+    {"id": 1008, "title": "Dating App Registration", "landing_page_url": "https://example.com/dating-app", "is_running": True},
+    {"id": 1009, "title": "Credit Card Application", "landing_page_url": "https://example.com/credit-card", "is_running": True},
+    {"id": 1010, "title": "Software Free Trial", "landing_page_url": "https://example.com/software-trial", "is_running": True},
+    {"id": 1011, "title": "Online Course Enrollment", "landing_page_url": "https://example.com/course-enrollment", "is_running": False},
+    {"id": 1012, "title": "E-book Download", "landing_page_url": "https://example.com/ebook-download", "is_running": True},
+    {"id": 1013, "title": "Home Loan Quote", "landing_page_url": "https://example.com/home-loan", "is_running": True},
+    {"id": 1014, "title": "VPN Subscription", "landing_page_url": "https://example.com/vpn-service", "is_running": True},
+    {"id": 1015, "title": "Fitness App Subscription", "landing_page_url": "https://example.com/fitness-app", "is_running": False},
+    {"id": 1016, "title": "Streaming Service Trial", "landing_page_url": "https://example.com/streaming-trial", "is_running": True},
+    {"id": 1017, "title": "Personal Loan Application", "landing_page_url": "https://example.com/personal-loan", "is_running": True},
+    {"id": 1018, "title": "Webinar Registration", "landing_page_url": "https://example.com/webinar", "is_running": False},
+    {"id": 1019, "title": "Cloud Storage Upgrade", "landing_page_url": "https://example.com/cloud-storage", "is_running": True},
+    {"id": 1020, "title": "Language Learning App", "landing_page_url": "https://example.com/language-app", "is_running": True},
+    {"id": 1021, "title": "Auto Insurance Quote", "landing_page_url": "https://example.com/auto-insurance", "is_running": True},
+    {"id": 1022, "title": "Investment Platform", "landing_page_url": "https://example.com/investment", "is_running": False},
+    {"id": 1023, "title": "Premium Newsletter", "landing_page_url": "https://example.com/newsletter", "is_running": True},
+    {"id": 1024, "title": "Productivity Tool Signup", "landing_page_url": "https://example.com/productivity-tool", "is_running": True},
+    {"id": 1025, "title": "Health Insurance Quote", "landing_page_url": "https://example.com/health-insurance", "is_running": True},
+    {"id": 1026, "title": "Podcast Subscription", "landing_page_url": "https://example.com/podcast", "is_running": False},
+    {"id": 1027, "title": "Real Estate Listing", "landing_page_url": "https://example.com/real-estate", "is_running": True},
+    {"id": 1028, "title": "Crypto Wallet Registration", "landing_page_url": "https://example.com/crypto-wallet", "is_running": True},
+    {"id": 1029, "title": "Career Coaching Service", "landing_page_url": "https://example.com/career-coaching", "is_running": False},
+    {"id": 1030, "title": "Business Software Demo", "landing_page_url": "https://example.com/software-demo", "is_running": True},
+    {"id": 1031, "title": "Food Delivery App", "landing_page_url": "https://example.com/food-delivery", "is_running": True},
+    {"id": 1032, "title": "Retirement Planning Tool", "landing_page_url": "https://example.com/retirement-planning", "is_running": True},
+    {"id": 1033, "title": "Smart Home Device", "landing_page_url": "https://example.com/smart-home", "is_running": False},
+    {"id": 1034, "title": "Video Editing Tool", "landing_page_url": "https://example.com/video-editor", "is_running": True},
+    {"id": 1035, "title": "Student Loan Refinance", "landing_page_url": "https://example.com/student-loan", "is_running": True},
+    {"id": 1036, "title": "Music Streaming Premium", "landing_page_url": "https://example.com/music-premium", "is_running": True},
+    {"id": 1037, "title": "Tax Preparation Service", "landing_page_url": "https://example.com/tax-service", "is_running": False},
+    {"id": 1038, "title": "Resume Builder Tool", "landing_page_url": "https://example.com/resume-builder", "is_running": True},
+    {"id": 1039, "title": "Meal Kit Subscription", "landing_page_url": "https://example.com/meal-kit", "is_running": True},
+    {"id": 1040, "title": "Meditation App Trial", "landing_page_url": "https://example.com/meditation-app", "is_running": True},
+]
+
+campaign_payouts_data = [
+    {"id": 1, "campaign_id": 1001, "country_code": "US", "country_name": "United States", "amount": 2.5},
+    {"id": 2, "campaign_id": 1001, "country_code": "CA", "country_name": "Canada", "amount": 2.25},
+    {"id": 3, "campaign_id": 1001, "country_code": "GB", "country_name": "United Kingdom", "amount": 2.0},
+    {"id": 4, "campaign_id": 1001, "country_code": "DE", "country_name": "Germany", "amount": 2.35},
+    {"id": 5, "campaign_id": 1002, "country_code": "US", "country_name": "United States", "amount": 1.75},
+    {"id": 6, "campaign_id": 1002, "country_code": "DE", "country_name": "Germany", "amount": 1.6},
+    {"id": 7, "campaign_id": 1002, "country_code": "FR", "country_name": "France", "amount": 1.5},
+    {"id": 8, "campaign_id": 1003, "country_code": "US", "country_name": "United States", "amount": 1.25},
+    {"id": 9, "campaign_id": 1003, "country_code": "AU", "country_name": "Australia", "amount": 1.2},
+    {"id": 10, "campaign_id": 1004, "country_code": "US", "country_name": "United States", "amount": 3.0},
+    {"id": 11, "campaign_id": 1004, "country_code": "KR", "country_name": "South Korea", "amount": 2.8},
+    {"id": 12, "campaign_id": 1004, "country_code": "JP", "country_name": "Japan", "amount": 2.75},
+    {"id": 13, "campaign_id": 1004, "country_code": "AU", "country_name": "Australia", "amount": 3.1},
+    {"id": 14, "campaign_id": 1005, "country_code": "US", "country_name": "United States", "amount": 5.5},
+    {"id": 15, "campaign_id": 1005, "country_code": "CA", "country_name": "Canada", "amount": 5.25},
+    {"id": 16, "campaign_id": 1005, "country_code": "GB", "country_name": "United Kingdom", "amount": 5.0},
+    {"id": 17, "campaign_id": 1006, "country_code": "US", "country_name": "United States", "amount": 6.0},
+    {"id": 18, "campaign_id": 1007, "country_code": "GB", "country_name": "United Kingdom", "amount": 3.25},
+    {"id": 19, "campaign_id": 1008, "country_code": "US", "country_name": "United States", "amount": 4.0},
+    {"id": 20, "campaign_id": 1008, "country_code": "FR", "country_name": "France", "amount": 3.75},
+    {"id": 21, "campaign_id": 1008, "country_code": "ES", "country_name": "Spain", "amount": 3.5},
+    {"id": 22, "campaign_id": 1009, "country_code": "US", "country_name": "United States", "amount": 8.0},
+    {"id": 23, "campaign_id": 1009, "country_code": "CA", "country_name": "Canada", "amount": 7.5},
+    {"id": 24, "campaign_id": 1009, "country_code": "AU", "country_name": "Australia", "amount": 7.25},
+    {"id": 25, "campaign_id": 1010, "country_code": "US", "country_name": "United States", "amount": 4.5},
+    {"id": 26, "campaign_id": 1010, "country_code": "GB", "country_name": "United Kingdom", "amount": 4.25},
+    {"id": 27, "campaign_id": 1010, "country_code": "DE", "country_name": "Germany", "amount": 4.0},
+    {"id": 28, "campaign_id": 1011, "country_code": "US", "country_name": "United States", "amount": 5.0},
+    {"id": 29, "campaign_id": 1011, "country_code": "IN", "country_name": "India", "amount": 3.5},
+    {"id": 30, "campaign_id": 1011, "country_code": "BR", "country_name": "Brazil", "amount": 3.75},
+    {"id": 31, "campaign_id": 1012, "country_code": "US", "country_name": "United States", "amount": 2.0},
+    {"id": 32, "campaign_id": 1012, "country_code": "CA", "country_name": "Canada", "amount": 1.85},
+    {"id": 33, "campaign_id": 1013, "country_code": "US", "country_name": "United States", "amount": 9.0},
+    {"id": 34, "campaign_id": 1013, "country_code": "CA", "country_name": "Canada", "amount": 8.75},
+    {"id": 35, "campaign_id": 1013, "country_code": "AU", "country_name": "Australia", "amount": 8.5},
+    {"id": 36, "campaign_id": 1014, "country_code": "US", "country_name": "United States", "amount": 3.25},
+    {"id": 37, "campaign_id": 1014, "country_code": "GB", "country_name": "United Kingdom", "amount": 3.0},
+    {"id": 38, "campaign_id": 1014, "country_code": "DE", "country_name": "Germany", "amount": 2.85},
+    {"id": 39, "campaign_id": 1014, "country_code": "JP", "country_name": "Japan", "amount": 2.75},
+    {"id": 40, "campaign_id": 1015, "country_code": "US", "country_name": "United States", "amount": 3.75},
+    {"id": 41, "campaign_id": 1015, "country_code": "CA", "country_name": "Canada", "amount": 3.5},
+    {"id": 42, "campaign_id": 1015, "country_code": "AU", "country_name": "Australia", "amount": 3.25},
+    {"id": 43, "campaign_id": 1016, "country_code": "US", "country_name": "United States", "amount": 4.25},
+    {"id": 44, "campaign_id": 1016, "country_code": "GB", "country_name": "United Kingdom", "amount": 4.0},
+    {"id": 45, "campaign_id": 1016, "country_code": "DE", "country_name": "Germany", "amount": 3.85},
+    {"id": 46, "campaign_id": 1017, "country_code": "US", "country_name": "United States", "amount": 7.5},
+    {"id": 47, "campaign_id": 1017, "country_code": "CA", "country_name": "Canada", "amount": 7.25},
+    {"id": 48, "campaign_id": 1018, "country_code": "US", "country_name": "United States", "amount": 2.75},
+    {"id": 49, "campaign_id": 1018, "country_code": "GB", "country_name": "United Kingdom", "amount": 2.5},
+    {"id": 50, "campaign_id": 1018, "country_code": "DE", "country_name": "Germany", "amount": 2.35},
+    {"id": 51, "campaign_id": 1019, "country_code": "US", "country_name": "United States", "amount": 5.25},
+    {"id": 52, "campaign_id": 1019, "country_code": "GB", "country_name": "United Kingdom", "amount": 5.0},
+    {"id": 53, "campaign_id": 1019, "country_code": "JP", "country_name": "Japan", "amount": 4.85},
+    {"id": 54, "campaign_id": 1020, "country_code": "US", "country_name": "United States", "amount": 3.5},
+    {"id": 55, "campaign_id": 1020, "country_code": "FR", "country_name": "France", "amount": 3.25},
+    {"id": 56, "campaign_id": 1020, "country_code": "ES", "country_name": "Spain", "amount": 3.15},
+    {"id": 57, "campaign_id": 1021, "country_code": "US", "country_name": "United States", "amount": 6.5},
+    {"id": 58, "campaign_id": 1021, "country_code": "CA", "country_name": "Canada", "amount": 6.25},
+    {"id": 59, "campaign_id": 1021, "country_code": "AU", "country_name": "Australia", "amount": 6.0},
+    {"id": 60, "campaign_id": 1022, "country_code": "US", "country_name": "United States", "amount": 8.5},
+    {"id": 61, "campaign_id": 1022, "country_code": "GB", "country_name": "United Kingdom", "amount": 8.25},
+    {"id": 62, "campaign_id": 1022, "country_code": "SG", "country_name": "Singapore", "amount": 8.0},
+    {"id": 63, "campaign_id": 1023, "country_code": "US", "country_name": "United States", "amount": 2.25},
+    {"id": 64, "campaign_id": 1023, "country_code": "CA", "country_name": "Canada", "amount": 2.1},
+    {"id": 65, "campaign_id": 1024, "country_code": "US", "country_name": "United States", "amount": 3.75},
+    {"id": 66, "campaign_id": 1024, "country_code": "GB", "country_name": "United Kingdom", "amount": 3.5},
+    {"id": 67, "campaign_id": 1024, "country_code": "DE", "country_name": "Germany", "amount": 3.35},
+    {"id": 68, "campaign_id": 1025, "country_code": "US", "country_name": "United States", "amount": 7.0},
+    {"id": 69, "campaign_id": 1025, "country_code": "CA", "country_name": "Canada", "amount": 6.75},
+    {"id": 70, "campaign_id": 1025, "country_code": "AU", "country_name": "Australia", "amount": 6.5},
+    {"id": 71, "campaign_id": 1026, "country_code": "US", "country_name": "United States", "amount": 2.5},
+    {"id": 72, "campaign_id": 1026, "country_code": "GB", "country_name": "United Kingdom", "amount": 2.35},
+    {"id": 73, "campaign_id": 1026, "country_code": "CA", "country_name": "Canada", "amount": 2.25},
+    {"id": 74, "campaign_id": 1027, "country_code": "US", "country_name": "United States", "amount": 6.25},
+    {"id": 75, "campaign_id": 1027, "country_code": "CA", "country_name": "Canada", "amount": 6.0},
+    {"id": 76, "campaign_id": 1027, "country_code": "AU", "country_name": "Australia", "amount": 5.85},
+    {"id": 77, "campaign_id": 1028, "country_code": "US", "country_name": "United States", "amount": 5.75},
+    {"id": 78, "campaign_id": 1028, "country_code": "SG", "country_name": "Singapore", "amount": 5.5},
+    {"id": 79, "campaign_id": 1028, "country_code": "KR", "country_name": "South Korea", "amount": 5.25},
+    {"id": 80, "campaign_id": 1029, "country_code": "US", "country_name": "United States", "amount": 4.75},
+    {"id": 81, "campaign_id": 1029, "country_code": "GB", "country_name": "United Kingdom", "amount": 4.5},
+    {"id": 82, "campaign_id": 1029, "country_code": "CA", "country_name": "Canada", "amount": 4.35},
+    {"id": 83, "campaign_id": 1030, "country_code": "US", "country_name": "United States", "amount": 6.0},
+    {"id": 84, "campaign_id": 1030, "country_code": "GB", "country_name": "United Kingdom", "amount": 5.75},
+    {"id": 85, "campaign_id": 1030, "country_code": "DE", "country_name": "Germany", "amount": 5.5},
+    {"id": 86, "campaign_id": 1031, "country_code": "US", "country_name": "United States", "amount": 3.25},
+    {"id": 87, "campaign_id": 1031, "country_code": "CA", "country_name": "Canada", "amount": 3.0},
+    {"id": 88, "campaign_id": 1031, "country_code": "GB", "country_name": "United Kingdom", "amount": 2.85},
+    {"id": 89, "campaign_id": 1032, "country_code": "US", "country_name": "United States", "amount": 7.25},
+    {"id": 90, "campaign_id": 1032, "country_code": "CA", "country_name": "Canada", "amount": 7.0},
+    {"id": 91, "campaign_id": 1032, "country_code": "AU", "country_name": "Australia", "amount": 6.75},
+    {"id": 92, "campaign_id": 1033, "country_code": "US", "country_name": "United States", "amount": 4.5},
+    {"id": 93, "campaign_id": 1033, "country_code": "GB", "country_name": "United Kingdom", "amount": 4.25},
+    {"id": 94, "campaign_id": 1033, "country_code": "DE", "country_name": "Germany", "amount": 4.0},
+    {"id": 95, "campaign_id": 1034, "country_code": "US", "country_name": "United States", "amount": 3.85},
+    {"id": 96, "campaign_id": 1034, "country_code": "GB", "country_name": "United Kingdom", "amount": 3.6},
+    {"id": 97, "campaign_id": 1034, "country_code": "CA", "country_name": "Canada", "amount": 3.5},
+    {"id": 98, "campaign_id": 1035, "country_code": "US", "country_name": "United States", "amount": 8.25},
+    {"id": 99, "campaign_id": 1035, "country_code": "CA", "country_name": "Canada", "amount": 8.0},
+    {"id": 100, "campaign_id": 1035, "country_code": "AU", "country_name": "Australia", "amount": 7.75},
+    {"id": 101, "campaign_id": 1036, "country_code": "US", "country_name": "United States", "amount": 3.5},
+    {"id": 102, "campaign_id": 1036, "country_code": "GB", "country_name": "United Kingdom", "amount": 3.25},
+    {"id": 103, "campaign_id": 1036, "country_code": "DE", "country_name": "Germany", "amount": 3.1},
+    {"id": 104, "campaign_id": 1037, "country_code": "US", "country_name": "United States", "amount": 6.75},
+    {"id": 105, "campaign_id": 1037, "country_code": "CA", "country_name": "Canada", "amount": 6.5},
+    {"id": 106, "campaign_id": 1037, "country_code": "AU", "country_name": "Australia", "amount": 6.25},
+    {"id": 107, "campaign_id": 1038, "country_code": "US", "country_name": "United States", "amount": 2.95},
+    {"id": 108, "campaign_id": 1038, "country_code": "GB", "country_name": "United Kingdom", "amount": 2.75},
+    {"id": 109, "campaign_id": 1038, "country_code": "CA", "country_name": "Canada", "amount": 2.65},
+    {"id": 110, "campaign_id": 1039, "country_code": "US", "country_name": "United States", "amount": 5.25},
+    {"id": 111, "campaign_id": 1039, "country_code": "CA", "country_name": "Canada", "amount": 5.0},
+    {"id": 112, "campaign_id": 1039, "country_code": "GB", "country_name": "United Kingdom", "amount": 4.85},
+    {"id": 113, "campaign_id": 1040, "country_code": "US", "country_name": "United States", "amount": 3.15},
+    {"id": 114, "campaign_id": 1040, "country_code": "AU", "country_name": "Australia", "amount": 3.0},
+    {"id": 115, "campaign_id": 1040, "country_code": "GB", "country_name": "United Kingdom", "amount": 2.9},
+]
+
+
+def upgrade():
+    op.bulk_insert(campaign_table, campaign_data)
+    op.bulk_insert(campaign_payout_table, campaign_payouts_data)
+
+def downgrade():
+    op.execute("DELETE FROM campaign_payouts WHERE campaign_id BETWEEN 1001 AND 1040")
+    op.execute("DELETE FROM campaigns WHERE id BETWEEN 1001 AND 1040")

@@ -19,7 +19,7 @@ export function CampaignDeleteConfirmation() {
     <AlertDialog open={isDeleteAlertOpen}>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you sure you want to delete campaign <br /><span className="underline decoration-blue-500 ">{selectedCampaign?.title}</span>?</AlertDialogTitle>
+          <AlertDialogTitle>Are you sure you want to delete campaign <br /><span className="underline decoration-violet-500 ">{selectedCampaign?.title}</span>?</AlertDialogTitle>
           <AlertDialogDescription>
             This action cannot be undone. The campaign will be permanently deleted.
           </AlertDialogDescription>

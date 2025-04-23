@@ -142,7 +142,7 @@ const columns: ColumnDef<z.infer<typeof CampaignSchema>>[] = [
         {!row.original.isRunning ? (
           <div className="rounded-full bg-gray-300 size-2"></div>
         ) : (
-          <div className="rounded-full bg-blue-500 size-2"></div>
+          <div className="rounded-full bg-violet-400 size-2"></div>
         )}
         {row.original.isRunning ? 'Running' : 'Not Started'}
       </div>
@@ -313,6 +313,7 @@ export function DataTable({
                 })}
             </DropdownMenuContent>
           </DropdownMenu>
+          <Button variant="pop" onClick={() => console.log('click')}>+ Create New</Button>
         </div>
       </div>
       <TabsContent
