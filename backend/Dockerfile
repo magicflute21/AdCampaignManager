@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD sh -c "sleep 10 && echo 'Running migrations...' && alembic upgrade head && echo 'Starting API...' && uvicorn app.main:app --host 0.0.0.0 --port 8000"
