@@ -2,31 +2,31 @@
   {
     "id": 1001,
     "title": "Summer Sale Promotion",
-    "landingPageUrl": "https://example.com/summer-sale",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/summer-sale",
+    "is_running": true,
     "payouts": [
       {
         "id": 1,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 2.5
       },
       {
         "id": 2,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 2.25
       },
       {
         "id": 3,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 2
       },
       {
         "id": 4,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 2.35
       }
     ]
@@ -34,25 +34,25 @@
   {
     "id": 1002,
     "title": "Mobile App Download",
-    "landingPageUrl": "https://example.com/app-download",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/app-download",
+    "is_running": true,
     "payouts": [
       {
         "id": 5,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 1.75
       },
       {
         "id": 6,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 1.6
       },
       {
         "id": 7,
-        "countryCode": "FR",
-        "countryName": "France",
+        "country_code": "FR",
+        "country_name": "France",
         "amount": 1.5
       }
     ]
@@ -60,19 +60,19 @@
   {
     "id": 1003,
     "title": "Email Subscription Drive",
-    "landingPageUrl": "https://example.com/subscribe",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/subscribe",
+    "is_running": false,
     "payouts": [
       {
         "id": 8,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 1.25
       },
       {
         "id": 9,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 1.2
       }
     ]
@@ -80,31 +80,31 @@
   {
     "id": 1004,
     "title": "Gaming Tournament Registration",
-    "landingPageUrl": "https://example.com/tournament",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/tournament",
+    "is_running": true,
     "payouts": [
       {
         "id": 10,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 3
       },
       {
         "id": 11,
-        "countryCode": "KR",
-        "countryName": "South Korea",
+        "country_code": "KR",
+        "country_name": "South Korea",
         "amount": 2.8
       },
       {
         "id": 12,
-        "countryCode": "JP",
-        "countryName": "Japan",
+        "country_code": "JP",
+        "country_name": "Japan",
         "amount": 2.75
       },
       {
         "id": 13,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 3.1
       }
     ]
@@ -112,25 +112,25 @@
   {
     "id": 1005,
     "title": "Financial Service Lead Gen",
-    "landingPageUrl": "https://example.com/finance-service",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/finance-service",
+    "is_running": true,
     "payouts": [
       {
         "id": 14,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 5.5
       },
       {
         "id": 15,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 5.25
       },
       {
         "id": 16,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 5
       }
     ]
@@ -138,13 +138,13 @@
   {
     "id": 1006,
     "title": "Insurance Quote Campaign",
-    "landingPageUrl": "https://example.com/insurance-quote",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/insurance-quote",
+    "is_running": true,
     "payouts": [
       {
         "id": 17,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 6
       }
     ]
@@ -152,13 +152,13 @@
   {
     "id": 1007,
     "title": "Travel Package Deal",
-    "landingPageUrl": "https://example.com/travel-deal",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/travel-deal",
+    "is_running": false,
     "payouts": [
       {
         "id": 18,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 3.25
       }
     ]
@@ -166,25 +166,25 @@
   {
     "id": 1008,
     "title": "Dating App Registration",
-    "landingPageUrl": "https://example.com/dating-app",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/dating-app",
+    "is_running": true,
     "payouts": [
       {
         "id": 19,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 4
       },
       {
         "id": 20,
-        "countryCode": "FR",
-        "countryName": "France",
+        "country_code": "FR",
+        "country_name": "France",
         "amount": 3.75
       },
       {
         "id": 21,
-        "countryCode": "ES",
-        "countryName": "Spain",
+        "country_code": "ES",
+        "country_name": "Spain",
         "amount": 3.5
       }
     ]
@@ -192,25 +192,25 @@
   {
     "id": 1009,
     "title": "Credit Card Application",
-    "landingPageUrl": "https://example.com/credit-card",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/credit-card",
+    "is_running": true,
     "payouts": [
       {
         "id": 22,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 8
       },
       {
         "id": 23,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 7.5
       },
       {
         "id": 24,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 7.25
       }
     ]
@@ -218,25 +218,25 @@
   {
     "id": 1010,
     "title": "Software Free Trial",
-    "landingPageUrl": "https://example.com/software-trial",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/software-trial",
+    "is_running": true,
     "payouts": [
       {
         "id": 25,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 4.5
       },
       {
         "id": 26,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 4.25
       },
       {
         "id": 27,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 4
       }
     ]
@@ -244,25 +244,25 @@
   {
     "id": 1011,
     "title": "Online Course Enrollment",
-    "landingPageUrl": "https://example.com/course-enrollment",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/course-enrollment",
+    "is_running": false,
     "payouts": [
       {
         "id": 28,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 5
       },
       {
         "id": 29,
-        "countryCode": "IN",
-        "countryName": "India",
+        "country_code": "IN",
+        "country_name": "India",
         "amount": 3.5
       },
       {
         "id": 30,
-        "countryCode": "BR",
-        "countryName": "Brazil",
+        "country_code": "BR",
+        "country_name": "Brazil",
         "amount": 3.75
       }
     ]
@@ -270,19 +270,19 @@
   {
     "id": 1012,
     "title": "E-book Download",
-    "landingPageUrl": "https://example.com/ebook-download",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/ebook-download",
+    "is_running": true,
     "payouts": [
       {
         "id": 31,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 2
       },
       {
         "id": 32,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 1.85
       }
     ]
@@ -290,25 +290,25 @@
   {
     "id": 1013,
     "title": "Home Loan Quote",
-    "landingPageUrl": "https://example.com/home-loan",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/home-loan",
+    "is_running": true,
     "payouts": [
       {
         "id": 33,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 9
       },
       {
         "id": 34,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 8.75
       },
       {
         "id": 35,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 8.5
       }
     ]
@@ -316,31 +316,31 @@
   {
     "id": 1014,
     "title": "VPN Subscription",
-    "landingPageUrl": "https://example.com/vpn-service",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/vpn-service",
+    "is_running": true,
     "payouts": [
       {
         "id": 36,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 3.25
       },
       {
         "id": 37,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 3
       },
       {
         "id": 38,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 2.85
       },
       {
         "id": 39,
-        "countryCode": "JP",
-        "countryName": "Japan",
+        "country_code": "JP",
+        "country_name": "Japan",
         "amount": 2.75
       }
     ]
@@ -348,25 +348,25 @@
   {
     "id": 1015,
     "title": "Fitness App Subscription",
-    "landingPageUrl": "https://example.com/fitness-app",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/fitness-app",
+    "is_running": false,
     "payouts": [
       {
         "id": 40,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 3.75
       },
       {
         "id": 41,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 3.5
       },
       {
         "id": 42,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 3.25
       }
     ]
@@ -374,25 +374,25 @@
   {
     "id": 1016,
     "title": "Streaming Service Trial",
-    "landingPageUrl": "https://example.com/streaming-trial",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/streaming-trial",
+    "is_running": true,
     "payouts": [
       {
         "id": 43,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 4.25
       },
       {
         "id": 44,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 4
       },
       {
         "id": 45,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 3.85
       }
     ]
@@ -400,19 +400,19 @@
   {
     "id": 1017,
     "title": "Personal Loan Application",
-    "landingPageUrl": "https://example.com/personal-loan",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/personal-loan",
+    "is_running": true,
     "payouts": [
       {
         "id": 46,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 7.5
       },
       {
         "id": 47,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 7.25
       }
     ]
@@ -420,25 +420,25 @@
   {
     "id": 1018,
     "title": "Webinar Registration",
-    "landingPageUrl": "https://example.com/webinar",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/webinar",
+    "is_running": false,
     "payouts": [
       {
         "id": 48,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 2.75
       },
       {
         "id": 49,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 2.5
       },
       {
         "id": 50,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 2.35
       }
     ]
@@ -446,25 +446,25 @@
   {
     "id": 1019,
     "title": "Cloud Storage Upgrade",
-    "landingPageUrl": "https://example.com/cloud-storage",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/cloud-storage",
+    "is_running": true,
     "payouts": [
       {
         "id": 51,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 5.25
       },
       {
         "id": 52,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 5
       },
       {
         "id": 53,
-        "countryCode": "JP",
-        "countryName": "Japan",
+        "country_code": "JP",
+        "country_name": "Japan",
         "amount": 4.85
       }
     ]
@@ -472,25 +472,25 @@
   {
     "id": 1020,
     "title": "Language Learning App",
-    "landingPageUrl": "https://example.com/language-app",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/language-app",
+    "is_running": true,
     "payouts": [
       {
         "id": 54,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 3.5
       },
       {
         "id": 55,
-        "countryCode": "FR",
-        "countryName": "France",
+        "country_code": "FR",
+        "country_name": "France",
         "amount": 3.25
       },
       {
         "id": 56,
-        "countryCode": "ES",
-        "countryName": "Spain",
+        "country_code": "ES",
+        "country_name": "Spain",
         "amount": 3.15
       }
     ]
@@ -498,25 +498,25 @@
   {
     "id": 1021,
     "title": "Auto Insurance Quote",
-    "landingPageUrl": "https://example.com/auto-insurance",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/auto-insurance",
+    "is_running": true,
     "payouts": [
       {
         "id": 57,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 6.5
       },
       {
         "id": 58,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 6.25
       },
       {
         "id": 59,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 6
       }
     ]
@@ -524,25 +524,25 @@
   {
     "id": 1022,
     "title": "Investment Platform",
-    "landingPageUrl": "https://example.com/investment",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/investment",
+    "is_running": false,
     "payouts": [
       {
         "id": 60,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 8.5
       },
       {
         "id": 61,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 8.25
       },
       {
         "id": 62,
-        "countryCode": "SG",
-        "countryName": "Singapore",
+        "country_code": "SG",
+        "country_name": "Singapore",
         "amount": 8
       }
     ]
@@ -550,19 +550,19 @@
   {
     "id": 1023,
     "title": "Premium Newsletter",
-    "landingPageUrl": "https://example.com/newsletter",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/newsletter",
+    "is_running": true,
     "payouts": [
       {
         "id": 63,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 2.25
       },
       {
         "id": 64,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 2.1
       }
     ]
@@ -570,25 +570,25 @@
   {
     "id": 1024,
     "title": "Productivity Tool Signup",
-    "landingPageUrl": "https://example.com/productivity-tool",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/productivity-tool",
+    "is_running": true,
     "payouts": [
       {
         "id": 65,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 3.75
       },
       {
         "id": 66,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 3.5
       },
       {
         "id": 67,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 3.35
       }
     ]
@@ -596,25 +596,25 @@
   {
     "id": 1025,
     "title": "Health Insurance Quote",
-    "landingPageUrl": "https://example.com/health-insurance",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/health-insurance",
+    "is_running": true,
     "payouts": [
       {
         "id": 68,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 7
       },
       {
         "id": 69,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 6.75
       },
       {
         "id": 70,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 6.5
       }
     ]
@@ -622,25 +622,25 @@
   {
     "id": 1026,
     "title": "Podcast Subscription",
-    "landingPageUrl": "https://example.com/podcast",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/podcast",
+    "is_running": false,
     "payouts": [
       {
         "id": 71,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 2.5
       },
       {
         "id": 72,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 2.35
       },
       {
         "id": 73,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 2.25
       }
     ]
@@ -648,25 +648,25 @@
   {
     "id": 1027,
     "title": "Real Estate Listing",
-    "landingPageUrl": "https://example.com/real-estate",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/real-estate",
+    "is_running": true,
     "payouts": [
       {
         "id": 74,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 6.25
       },
       {
         "id": 75,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 6
       },
       {
         "id": 76,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 5.85
       }
     ]
@@ -674,25 +674,25 @@
   {
     "id": 1028,
     "title": "Crypto Wallet Registration",
-    "landingPageUrl": "https://example.com/crypto-wallet",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/crypto-wallet",
+    "is_running": true,
     "payouts": [
       {
         "id": 77,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 5.75
       },
       {
         "id": 78,
-        "countryCode": "SG",
-        "countryName": "Singapore",
+        "country_code": "SG",
+        "country_name": "Singapore",
         "amount": 5.5
       },
       {
         "id": 79,
-        "countryCode": "KR",
-        "countryName": "South Korea",
+        "country_code": "KR",
+        "country_name": "South Korea",
         "amount": 5.25
       }
     ]
@@ -700,25 +700,25 @@
   {
     "id": 1029,
     "title": "Career Coaching Service",
-    "landingPageUrl": "https://example.com/career-coaching",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/career-coaching",
+    "is_running": false,
     "payouts": [
       {
         "id": 80,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 4.75
       },
       {
         "id": 81,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 4.5
       },
       {
         "id": 82,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 4.35
       }
     ]
@@ -726,25 +726,25 @@
   {
     "id": 1030,
     "title": "Business Software Demo",
-    "landingPageUrl": "https://example.com/software-demo",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/software-demo",
+    "is_running": true,
     "payouts": [
       {
         "id": 83,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 6
       },
       {
         "id": 84,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 5.75
       },
       {
         "id": 85,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 5.5
       }
     ]
@@ -752,25 +752,25 @@
   {
     "id": 1031,
     "title": "Food Delivery App",
-    "landingPageUrl": "https://example.com/food-delivery",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/food-delivery",
+    "is_running": true,
     "payouts": [
       {
         "id": 86,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 3.25
       },
       {
         "id": 87,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 3
       },
       {
         "id": 88,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 2.85
       }
     ]
@@ -778,25 +778,25 @@
   {
     "id": 1032,
     "title": "Retirement Planning Tool",
-    "landingPageUrl": "https://example.com/retirement-planning",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/retirement-planning",
+    "is_running": true,
     "payouts": [
       {
         "id": 89,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 7.25
       },
       {
         "id": 90,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 7
       },
       {
         "id": 91,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 6.75
       }
     ]
@@ -804,25 +804,25 @@
   {
     "id": 1033,
     "title": "Smart Home Device",
-    "landingPageUrl": "https://example.com/smart-home",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/smart-home",
+    "is_running": false,
     "payouts": [
       {
         "id": 92,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 4.5
       },
       {
         "id": 93,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 4.25
       },
       {
         "id": 94,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 4
       }
     ]
@@ -830,25 +830,25 @@
   {
     "id": 1034,
     "title": "Video Editing Tool",
-    "landingPageUrl": "https://example.com/video-editor",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/video-editor",
+    "is_running": true,
     "payouts": [
       {
         "id": 95,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 3.85
       },
       {
         "id": 96,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 3.6
       },
       {
         "id": 97,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 3.5
       }
     ]
@@ -856,25 +856,25 @@
   {
     "id": 1035,
     "title": "Student Loan Refinance",
-    "landingPageUrl": "https://example.com/student-loan",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/student-loan",
+    "is_running": true,
     "payouts": [
       {
         "id": 98,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 8.25
       },
       {
         "id": 99,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 8
       },
       {
         "id": 100,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 7.75
       }
     ]
@@ -882,25 +882,25 @@
   {
     "id": 1036,
     "title": "Music Streaming Premium",
-    "landingPageUrl": "https://example.com/music-premium",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/music-premium",
+    "is_running": true,
     "payouts": [
       {
         "id": 101,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 3.5
       },
       {
         "id": 102,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 3.25
       },
       {
         "id": 103,
-        "countryCode": "DE",
-        "countryName": "Germany",
+        "country_code": "DE",
+        "country_name": "Germany",
         "amount": 3.1
       }
     ]
@@ -908,25 +908,25 @@
   {
     "id": 1037,
     "title": "Tax Preparation Service",
-    "landingPageUrl": "https://example.com/tax-service",
-    "isRunning": false,
+    "landing_page_url": "https://example.com/tax-service",
+    "is_running": false,
     "payouts": [
       {
         "id": 104,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 6.75
       },
       {
         "id": 105,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 6.5
       },
       {
         "id": 106,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 6.25
       }
     ]
@@ -934,25 +934,25 @@
   {
     "id": 1038,
     "title": "Resume Builder Tool",
-    "landingPageUrl": "https://example.com/resume-builder",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/resume-builder",
+    "is_running": true,
     "payouts": [
       {
         "id": 107,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 2.95
       },
       {
         "id": 108,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 2.75
       },
       {
         "id": 109,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 2.65
       }
     ]
@@ -960,25 +960,25 @@
   {
     "id": 1039,
     "title": "Meal Kit Subscription",
-    "landingPageUrl": "https://example.com/meal-kit",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/meal-kit",
+    "is_running": true,
     "payouts": [
       {
         "id": 110,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 5.25
       },
       {
         "id": 111,
-        "countryCode": "CA",
-        "countryName": "Canada",
+        "country_code": "CA",
+        "country_name": "Canada",
         "amount": 5
       },
       {
         "id": 112,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 4.85
       }
     ]
@@ -986,25 +986,25 @@
   {
     "id": 1040,
     "title": "Meditation App Trial",
-    "landingPageUrl": "https://example.com/meditation-app",
-    "isRunning": true,
+    "landing_page_url": "https://example.com/meditation-app",
+    "is_running": true,
     "payouts": [
       {
         "id": 113,
-        "countryCode": "US",
-        "countryName": "United States",
+        "country_code": "US",
+        "country_name": "United States",
         "amount": 3.15
       },
       {
         "id": 114,
-        "countryCode": "AU",
-        "countryName": "Australia",
+        "country_code": "AU",
+        "country_name": "Australia",
         "amount": 3
       },
       {
         "id": 115,
-        "countryCode": "GB",
-        "countryName": "United Kingdom",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "amount": 2.9
       }
     ]

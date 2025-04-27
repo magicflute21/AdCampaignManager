@@ -1,21 +1,21 @@
 import { DataTable } from "@/components/layout/data-table"
-import data from '../../dummydata/adData.json';
 import { SearchBar } from "@/components/layout/searchbar";
 import { CampaignSkeleton } from "./campaign-skeleton";
 import { CampaignDialog } from "./campaign-dialog";
 import { CampaignDeleteConfirmation } from "./campaign-delete-confirmation";
+import { useCampaigns } from "@/hooks/use-campaigns";
 
 export default function Campaigns() {
-  const isLoading = false;
+  const { campaignsQuery } = useCampaigns();
+
   return (
     <>
-      {isLoading ? (
+      {campaignsQuery.isLoading ? (
         <CampaignSkeleton />
       ) : (
         <>
           <SearchBar />
-          <DataTable data={data} />
-
+          <DataTable />
 
           <CampaignDialog />
           <CampaignDeleteConfirmation />

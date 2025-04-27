@@ -50,7 +50,7 @@ export function CampaignDialog() {
 
   function EditModal({ campaign }: { campaign: Campaign }) {
     const form = useForm()
-    const [isRunning, setIsRunning] = useState(campaign.isRunning)
+    const [isRunning, setIsRunning] = useState(campaign.is_running)
 
     return (
       <Form {...form}>
@@ -68,8 +68,8 @@ export function CampaignDialog() {
             <div className='col-span-3 flex flex-col flex-wrap items-start gap-2'>
               {campaign.payouts.map((payout) => (
                 <Badge key={payout.id} variant="outline">
-                  <span className="text-sm text-violet-950 dark:text-gray-200">{getFlagEmoji(payout.countryCode)}</span>
-                  <span>{payout.countryName}</span>
+                  <span className="text-sm text-violet-950 dark:text-gray-200">{getFlagEmoji(payout.country_code)}</span>
+                  <span>{payout.country_name}</span>
                   <span className="font-medium ml-1">${payout.amount.toFixed(2)}</span>
                 </Badge>
               ))}
@@ -77,7 +77,7 @@ export function CampaignDialog() {
           </div>
         </div>
         <DialogFooter>
-          <Button variant="outline" onClick={() => setModalMode('view')}>Cancel</Button>
+          <Button variant="outline" onClick={closeModal}>Cancel</Button>
           <Button type="submit">Save</Button>
         </DialogFooter>
       </Form>
@@ -92,7 +92,7 @@ export function CampaignDialog() {
             <Label htmlFor="name" className="text-right">
               Status
             </Label>
-            {campaign.isRunning ? (
+            {campaign.is_running ? (
               <Badge variant="outline">
                 <CheckCircle className="text-violet-600" />
                 Active
@@ -111,8 +111,8 @@ export function CampaignDialog() {
             <div className='col-span-3 flex flex-col flex-wrap items-start gap-2'>
               {campaign.payouts.map((payout) => (
                 <Badge key={payout.id} variant="outline">
-                  <span className="text-sm text-violet-950 dark:text-gray-200">{getFlagEmoji(payout.countryCode)}</span>
-                  <span>{payout.countryName}</span>
+                  <span className="text-sm text-violet-950 dark:text-gray-200">{getFlagEmoji(payout.country_code)}</span>
+                  <span>{payout.country_name}</span>
                   <span className="font-medium ml-1">${payout.amount.toFixed(2)}</span>
                 </Badge>
               ))}
@@ -120,7 +120,7 @@ export function CampaignDialog() {
           </div>
         </div>
         <DialogFooter>
-          <Button variant="outline" onClick={() => closeModal()}>Close</Button>
+          <Button variant="outline" onClick={closeModal}>Cancel</Button>
           <Button type="button" onClick={() => setModalMode('edit')}>Edit</Button>
         </DialogFooter>
       </>
@@ -138,7 +138,7 @@ export function CampaignDialog() {
         <DialogHeader>
           <DialogTitle>{campaign.title}</DialogTitle>
           <DialogDescription>
-            {campaign.landingPageUrl}
+            {campaign.landing_page_url}
           </DialogDescription>
         </DialogHeader>
         <Content campaign={campaign} />
