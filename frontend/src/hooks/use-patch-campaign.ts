@@ -3,7 +3,7 @@ import { QUERY_KEYS } from '@/hooks/use-campaigns';
 import { Campaign } from '@/types/campaign-type';
 import { api, ENDPOINTS } from '@/api/api-client';
 import { toast } from 'sonner';
-import { useCampaignsStore } from '../src/store/useCampaignsStore';
+import { useCampaignsStore } from '../store/useCampaignsStore';
 
 interface PatchCampaignParams {
   id: number;

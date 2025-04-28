@@ -20,7 +20,7 @@ import {
   Form,
 } from "@/components/ui/form"
 import { useState } from 'react'
-import { usePatchCampaign } from 'hooks/usePatchCampaign'
+import { usePatchCampaign } from '@/hooks/use-patch-campaign'
 
 export function CampaignDialog() {
   const isModalOpen = useCampaignsStore((s) => s.isModalOpen)
