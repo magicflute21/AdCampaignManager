@@ -22,6 +22,7 @@ export function useCampaigns() {
 
   return {
     campaigns: campaignsQuery.data || [],
+    refetch: campaignsQuery.refetch,
     campaignsQuery,
   }
 }

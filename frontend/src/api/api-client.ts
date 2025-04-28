@@ -29,9 +29,39 @@ class ApiClient {
     return `${url}${url.includes('?') ? '&' : '?'}${queryString}`;
   }
 
+  private async handleBadRequest(response: Response): Promise<never> {
+    let errorMessage: string;
+
+    try {
+      const errorText = await response.text();
+      try {
+        const errorJson = JSON.parse(errorText);
+        errorMessage = errorJson.message || errorJson.error || 'An error occurred';
+      } catch {
+        errorMessage = response.statusText || 'An error occurred';
+      }
+    } catch {
+      errorMessage = `HTTP error ${response.status}`;
+    }
+
+    toast.error(errorMessage);
+    throw new Error(`API Error (${response.status}): ${errorMessage}`);
+  }
+
+  private handleError(error: unknown) {
+    if (error instanceof Error && error.message.includes('API Error')) {
+      throw error;
+    }
+
+    const errorMessage = error instanceof Error ? error.message : 'Network error';
+    toast.error(`Failed to fetch data: ${errorMessage}`);
+    throw new Error(`Network Error: ${errorMessage}`);
+  }
+
   async get<T>(endpoint: string, params?: Record<string, string>): Promise<T> {
     const url = this.addQueryParams(`${this.baseUrl}${endpoint}`, params);
 
+    console.log(url);
     try {
       const response = await fetch(url, {
         method: 'GET',
@@ -41,30 +71,43 @@ class ApiClient {
       });
 
       if (!response.ok) {
-        const errorText = await response.text().catch(() => 'Unknown error');
-        let errorMessage: string;
-
-        try {
-          const errorJson = JSON.parse(errorText);
-          errorMessage = errorJson.message || errorJson.error || 'An error occurred';
-        } catch {
-          errorMessage = response.statusText || 'An error occurred';
-        }
-
-        toast.error(errorMessage);
-        throw new Error(`API Error (${response.status}): ${errorMessage}`);
+        this.handleBadRequest(response)
       }
 
       const data = await response.json();
       return data;
     } catch (error) {
-      if (error instanceof Error && error.message.includes('API Error')) {
-        throw error;
+      this.handleError(error)
+
+      throw new Error("This will not be reached, just making ts happy")
+    }
+  }
+
+  async patch<T>(endpoint: string, data: any): Promise<T> {
+    const url = `${this.baseUrl}${endpoint}`;
+
+    console.log('url', url);
+
+    try {
+      const response = await fetch(url, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        this.handleBadRequest(response)
       }
 
-      const errorMessage = error instanceof Error ? error.message : 'Network error';
-      toast.error(`Failed to fetch data: ${errorMessage}`);
-      throw new Error(`Network Error: ${errorMessage}`);
+      const responseData = await response.json();
+      return responseData;
+    } catch (error) {
+      this.handleError(error)
+
+      throw new Error("This will not be reached, just making ts happy")
+
     }
   }
 }

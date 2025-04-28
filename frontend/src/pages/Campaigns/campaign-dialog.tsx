@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
-  DialogTrigger,
   DialogContent,
   DialogHeader,
   DialogTitle,
@@ -10,24 +9,18 @@ import {
 } from '../../components/ui/dialog'
 import {
   CheckCircle,
-  Pencil
 } from 'lucide-react'
 import { useForm } from "react-hook-form"
 import { Label } from '@/components/ui/label'
-import { Input } from '@/components/ui/input'
 import { Campaign } from '@/types/campaign-type'
 import { useCampaignsStore } from '@/store/useCampaignsStore'
 import { Badge } from '@/components/ui/badge'
 import { Switch } from '@/components/ui/switch'
 import {
   Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
 } from "@/components/ui/form"
 import { useState } from 'react'
+import { usePatchCampaign } from 'hooks/usePatchCampaign'
 
 export function CampaignDialog() {
   const isModalOpen = useCampaignsStore((s) => s.isModalOpen)
@@ -35,7 +28,7 @@ export function CampaignDialog() {
   const setModalMode = useCampaignsStore((s) => s.setModalMode)
   const modalMode = useCampaignsStore((s) => s.modalMode)
   const closeModal = useCampaignsStore((s) => s.closeModal)
-
+  const patchCampaignMutation = usePatchCampaign();
 
   if (!campaign) return null;
 
@@ -50,7 +43,14 @@ export function CampaignDialog() {
 
   function EditModal({ campaign }: { campaign: Campaign }) {
     const form = useForm()
-    const [isRunning, setIsRunning] = useState(campaign.is_running)
+    const [editingCampaign, setEditingCampaign] = useState(campaign)
+
+    function editCampaign(editC: Campaign) {
+      patchCampaignMutation.mutate({
+        id: editC.id,
+        isRunning: editC.is_running,
+      });
+    }
 
     return (
       <Form {...form}>
@@ -59,7 +59,10 @@ export function CampaignDialog() {
             <Label htmlFor="name" className="text-right">
               Status
             </Label>
-            <Switch checked={isRunning} onCheckedChange={() => setIsRunning((prev) => !prev)} />
+            <Switch checked={editingCampaign.is_running} onCheckedChange={(value) => setEditingCampaign((prev) => ({
+              ...prev,
+              is_running: value
+            }))} />
           </div>
           <div className="grid grid-cols-4 items-start gap-4">
             <Label htmlFor="username" className="text-right">
@@ -78,7 +81,7 @@ export function CampaignDialog() {
         </div>
         <DialogFooter>
           <Button variant="outline" onClick={closeModal}>Cancel</Button>
-          <Button type="submit">Save</Button>
+          <Button type="submit" onClick={() => editCampaign(editingCampaign)} disabled={patchCampaignMutation.isPending}>Save</Button>
         </DialogFooter>
       </Form>
     )
