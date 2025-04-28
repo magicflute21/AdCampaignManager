@@ -47,9 +47,11 @@ This application provides a management interface for marketing campaigns. It con
 2. Navigate to the project directory
 3. Create a `.env` file in the root directory with the following content:
 
+```bash
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DB=campaign_manager_db
+```
 
 4. Start the application:
 ```bash
@@ -58,9 +60,9 @@ docker-compose up
 
 5. The application will be available at:
 
-Frontend: http://localhost:5173
-Backend API: http://localhost:8000
-API Documentation: http://localhost:8000/docs
+- Frontend: http://localhost:5173
+- Backend API: http://localhost:8000
+- API Documentation: http://localhost:8000/docs
 
 The first startup may take a few minutes as Docker builds the images and initializes the database.
 
@@ -88,6 +90,7 @@ Automatic database migrations
 
 ## Project Structure
 
+```bash
 campaign-manager/
 ├── backend/               # Python FastAPI backend
 │   ├── alembic/           # Database migrations
@@ -113,3 +116,4 @@ campaign-manager/
 │   └── package.json       # Node.js dependencies
 ├── docker-compose.yml     # Docker Compose configuration
 └── .env                   # Environment variables
+```
