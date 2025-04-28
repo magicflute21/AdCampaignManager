@@ -117,3 +117,11 @@ campaign-manager/
 ├── docker-compose.yml     # Docker Compose configuration
 └── .env                   # Environment variables
 ```
+## 🧩Personal Notes
+
+When building these kinds of small applications, I find it a great opportunity to try out new ways of doing things. This time the big new thing for me was using the shandcn/ui library for the frontend layout and components. Wow, I was kinda blown away how great of a experience working with that library was. The dashboard was up and running maybe even too fast! And the fact that you can pick and choose only the components that you need and get an access to the source code is quite an unique approach and makes for a very lightweight library. It certainly brought new perspectives for me.
+
+Most of my working experience has been frontend focused and I'm gradually learning more backend technologies. This time wanted to use python with fastapi. Let's be honest, for the backend I did have to use the help of llms - setting up a new project from scratch for a backend junior is not an easy task and would have taken me a lot more time than to accomplish all that was done here (get and patch api endpoints, automatic alembic migrations etc.). So in order to support the frontend with actual functionalities, I had to take this shortcut. 
+
+I really wanted to setup docker for this project too, to make for an as-smooth-as-possible handover. Who wants to struggle with all the first installation setups when having a raw and non-containerized project at hand. Nuhuh, not me, and certainly not you. So hopefully the docker initialization works as smoothly for you as it does for me. Fingers crossed 🤞
+
