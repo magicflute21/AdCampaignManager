@@ -15,10 +15,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import adcashLogo from "@/assets/adcash-logo.svg" // light version
-import adcashLogoDark from "@/assets/adcash-logo-dark.svg"
+// import adcashLogo from "@/assets/adcash-logo.svg" // light version
+// import adcashLogoDark from "@/assets/adcash-logo-dark.svg"
+import nyanCatLogo from '@/assets/nyancat.png';
 import { NAV } from "@/lib/constants"
-import { useTheme } from "@/components/theme-provider"
+// import { useTheme } from "@/components/theme-provider"
 
 const data = {
   user: {
@@ -42,9 +43,10 @@ const data = {
   ],
   navSecondary: [],
 }
+
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const { theme } = useTheme();
-  const logo = theme === 'dark' ? adcashLogo : adcashLogoDark;
+  // const { theme } = useTheme();
+  // const logo = theme === 'dark' ? adcashLogo : adcashLogoDark;
 
   return (
     <Sidebar collapsible="offcanvas" {...props}>
@@ -53,11 +55,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
+              className="data-[slot=sidebar-menu-button]:!p-1 h-12"
             >
               <a href="#">
-                <img src={logo} alt="adcash logo" className="" />
-              </a>
+                <img src={nyanCatLogo} alt="nyancat logo" className="w-full h-full object-scale-down" />
+              </a> 
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
