@@ -2,6 +2,10 @@
 
 A full-stack application for managing marketing campaigns with regional payout information.
 
+![Dashboard Screenshot](src/assets/dashboard.png)
+
+Professional dashboard template built with React, shadcn/ui, and Recharts, adaptable for monitoring and data visualization use cases.
+
 ## Overview
 
 This application provides a management interface for marketing campaigns. It consists of:
